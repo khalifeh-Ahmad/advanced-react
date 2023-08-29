@@ -32,18 +32,46 @@ function App() {
       age: 22,
     },
   ];
+
+  const data = [
+    {
+      componentName: ShapOne,
+      data: {
+        id: 1,
+        name: "khalifeh",
+        email: "khalifeh@gmail.com",
+        age: 33,
+      },
+    },
+    {
+      componentName: ShapeTow,
+      data: {
+        id: 2,
+        name: "Alia",
+        email: "Alia@gmail.com",
+        age: 27,
+      },
+    },
+  ];
   // const callBackFn = (title) => {
   //   console.log(title);
   // };
+
+  const child = data.map((el) => {
+    let ComponentName = el.componentName;
+
+    return <ComponentName item={el.data}                                                                                                                                                                                key={el.data.id}></ComponentName>;
+  });
+
   return (
     <div className="App">
-      <List items={userData}>
+      {/* <List items={userData}>
         <ShapOne />
       </List>
       <List items={userData}>
         <ShapeTow />
-      </List>
-
+      </List> */}
+      {child}
       {/* <Button callBackFn={() => callBackFn("Single")}>Single</Button>
       <ButtonGroups>
         <Button callBackFn={() => callBackFn("First")}>First</Button>
