@@ -1,0 +1,14 @@
+.swiper-wrapper {
+  width: 1000px !important;
+  /* height: 300px; */
+  margin-bottom: 30px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100px; */
+  background-color: red;
+  /* height: 200px; */
+}

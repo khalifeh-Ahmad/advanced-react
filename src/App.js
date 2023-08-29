@@ -1,7 +1,5 @@
 import "./App.css";
-// import Button from "./Components/Button";
-// import ButtonGroups from "./Components/ButtonGroups";
-import List from "./Components/List";
+import SwiperCarosel from "./Components/SwiperCarosel";
 import ShapOne from "./Components/ShapOne";
 import ShapeTow from "./Components/ShapeTow";
 
@@ -32,23 +30,20 @@ function App() {
       age: 22,
     },
   ];
-  // const callBackFn = (title) => {
-  //   console.log(title);
-  // };
+  // const data = userData.map((elm) => {
+  //   return <SwiperSlide key={elm.id}>{elm.name}</SwiperSlide>;
+  // });
   return (
     <div className="App">
-      <List items={userData}>
+      <SwiperCarosel items={userData} slidesPerView={2}>
         <ShapOne />
-      </List>
-      <List items={userData}>
+      </SwiperCarosel>
+      <SwiperCarosel items={userData} slidesPerView={4}>
         <ShapeTow />
-      </List>
-
-      {/* <Button callBackFn={() => callBackFn("Single")}>Single</Button>
-      <ButtonGroups>
-        <Button callBackFn={() => callBackFn("First")}>First</Button>
-        <Button callBackFn={() => callBackFn("Second")}>Second</Button>
-      </ButtonGroups> */}
+      </SwiperCarosel>
+      <SwiperCarosel items={userData} pagination={true}>
+        <ShapOne />
+      </SwiperCarosel>
     </div>
   );
 }
